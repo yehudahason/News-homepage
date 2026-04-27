@@ -166,7 +166,7 @@ ul li a:hover {
 }
 .read-more {
   background: var(--primary-red);
-  color: white;
+  color: var(--dark-blue);
   border: none;
   padding: 1rem 2rem;
   letter-spacing: var(--ls-wide);
