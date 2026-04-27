@@ -1,6 +1,8 @@
 const openBtn = document.querySelector(".open");
 const closeBtn = document.querySelector(".close");
 const navbar = document.querySelector(".navbar");
+const navLinks = document.querySelector(".nav-links");
+const ulLinks = document.querySelector(".nav-links ul");
 const body = document.querySelector("body");
 
 openBtn.addEventListener("click", () => {
@@ -11,4 +13,11 @@ openBtn.addEventListener("click", () => {
 closeBtn.addEventListener("click", () => {
   navbar.classList.remove("active");
   body.classList.remove("active");
+});
+
+document.addEventListener("click", (e) => {
+  if (!navbar.contains(e.target) && e.target !== openBtn) {
+    body.classList.remove("active");
+    navbar.classList.remove("active");
+  }
 });
