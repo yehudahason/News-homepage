@@ -60,7 +60,7 @@ ul li a {
   color: var(--grayish);
 }
 .container {
-  max-width: 1112px;
+  max-width: 70rem;
   margin: 0 auto;
   display: grid;
   /* 3 Column layout */
@@ -75,7 +75,7 @@ ul li a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
+  padding: 1.25rem 0;
   width: 100%;
 }
 .navbar .nav-links img {
@@ -88,7 +88,7 @@ ul li a {
 .navbar ul {
   display: flex;
   list-style: none;
-  gap: 30px;
+  gap: 2rem;
   color: var(--grayish);
 }
 
@@ -133,7 +133,7 @@ ul li a:hover {
   color: var(--dark-blue);
   margin: 0;
   font-weight: 800;
-  min-width: 300px;
+  min-width: 18rem;
   /* padding-right: 0.5rem; */
 }
 
@@ -167,9 +167,9 @@ ul li a:hover {
   background: var(--primary-red);
   color: white;
   border: none;
-  padding: 15px 30px;
-  letter-spacing: 4px;
-  font-weight: bold;
+  padding: 1rem 2rem;
+  letter-spacing: var(--ls-wide);
+  font: var(--preset-7);
   cursor: pointer;
   width: max-content;
 }
@@ -193,14 +193,15 @@ ul li a:hover {
 }
 .article-snippet {
   border-bottom: 1px solid var(--grayish);
-  padding: 20px 0;
+  padding: 1.25rem 0;
+  margin-bottom: 1px 0;
 }
 .article-snippet:last-child {
   border-bottom: none;
 }
 .article-snippet h3 {
   font-size: 1.2rem;
-  margin-bottom: 10px;
+  margin-bottom: 0.6rem;
   cursor: pointer;
 }
 .article-snippet p {
@@ -214,14 +215,14 @@ ul li a:hover {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
-  margin-top: 40px;
+  margin-top: 2.5rem;
 }
 footer {
   grid-column: 1 / -1;
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  margin-top: 40px;
+  margin-top: 2.5rem;
 }
 
 .item {
@@ -235,7 +236,7 @@ footer {
   display: block;
 }
 .item h4 {
-  margin: 10px 0;
+  margin: 0.6rem 0;
   font-size: 1.1rem;
 }
 .item p {
@@ -279,14 +280,14 @@ footer {
   margin: 0 0.5rem;
   opacity: 0.6;
 }
-@media (max-width: 1060px) {
+@media (max-width: 66rem) {
   .featured-list {
     display: flex;
     flex-wrap: wrap;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
   body.active::before {
     content: "";
     position: fixed;
@@ -313,7 +314,7 @@ footer {
     display: flex;
   }
   .navbar.active .nav-links {
-    position: fixed;
+    position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
@@ -373,11 +374,11 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 1.25rem;
   }
 }
 
-@media (max-width: 530px) {
+@media (max-width: 33rem) {
   .navbar.active .nav-links {
     width: 75%;
   }
