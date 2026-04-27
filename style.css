@@ -213,6 +213,13 @@ ul li:hover {
   gap: 2rem;
   margin-top: 40px;
 }
+footer {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 40px;
+}
 
 .item {
   display: flex;
@@ -238,13 +245,41 @@ ul li:hover {
   height: 120px;
   object-fit: cover;
 }
+.attribution {
+  font: var(--text-preset-7-reg);
+  letter-spacing: var(--text-preset-7-reg-ls);
+  bottom: 1px;
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 1rem;
 
+  color: rgb(209, 154, 82);
+}
+
+/* Links */
+.attribution a {
+  margin: 0 0.25rem;
+  text-decoration: none;
+  font-weight: 600;
+  color: rgb(210, 93, 50);
+  transition:
+    color 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.attribution a:hover {
+  opacity: 0.5;
+}
+
+/* Separator dot */
+.separator {
+  margin: 0 0.5rem;
+  opacity: 0.6;
+}
 @media (max-width: 1060px) {
   .featured-list {
     display: flex;
     flex-wrap: wrap;
-  }
-  .item {
   }
 }
 

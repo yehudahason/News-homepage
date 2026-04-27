@@ -8,8 +8,8 @@ This is a solution to the [News homepage challenge on Frontend Mentor](https://w
 
 ### Links
 
-- My solution at : [GitHub Pages](https://your-solution-url.com)
+- My solution at : [GitHub Pages](https://yehudahason.github.io/News-homepage/)
 
 ## Author
 
-- Frontend Mentor - [Yehuda Hason](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [Yehuda Hason](https://www.frontendmentor.io/profile/yehudahason)
