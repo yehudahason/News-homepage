@@ -38,6 +38,9 @@ body {
   padding: 2rem;
   margin: 0;
 }
+a {
+  text-decoration: none;
+}
 
 h3 {
   font: var(--preset-4);
@@ -52,7 +55,7 @@ p {
   font: var(--preset-6);
   color: var(--grayish);
 }
-ul li {
+ul li a {
   font: var(--preset-6);
   color: var(--grayish);
 }
@@ -89,11 +92,11 @@ ul li {
   color: var(--grayish);
 }
 
-ul li:hover {
+ul li a:hover {
   color: var(--primary-red);
   cursor: pointer;
 }
-.navbar .nav-links ul li:hover {
+.navbar .nav-links ul li a:hover {
   color: var(--primary-red);
   cursor: pointer;
 }
