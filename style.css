@@ -302,6 +302,7 @@ footer {
   }
   .nav-links {
     position: relative;
+    transition: background-color 0.3s linear;
   }
   .container {
     display: flex;
