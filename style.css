@@ -79,7 +79,8 @@ ul li a {
   padding: 1.25rem 0;
   width: 100%;
 }
-.navbar .nav-links img {
+.navbar .nav-links img,
+.navbar .open {
   display: none;
   height: 2rem;
   width: 2rem;
