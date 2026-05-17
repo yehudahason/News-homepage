@@ -16,7 +16,7 @@ closeBtn.addEventListener("click", () => {
 });
 
 document.addEventListener("click", (e) => {
-  if (!navbar.contains(e.target) && e.target !== openBtn) {
+  if (!navLinks.contains(e.target) && e.target !== openBtn) {
     body.classList.remove("active");
     navbar.classList.remove("active");
   }
