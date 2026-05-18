@@ -331,11 +331,13 @@ footer {
     /* Handles smooth animation both opening and closing */
     transition: transform 0.3s ease-in-out;
     transform: translateX(100%);
+    visibility: hidden;
   }
 
   /* 2. Slide it to 0 when active */
   .navbar.active .nav-links {
     transform: translateX(0);
+    visibility: visible;
   }
 
   /* 3. Layout the list elements inside the drawer permanently */
