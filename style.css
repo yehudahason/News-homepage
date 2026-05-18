@@ -79,7 +79,7 @@ ul li a {
   padding: 1.25rem 0;
   width: 100%;
 }
-.navbar .nav-links img,
+.nav-links img,
 .navbar .open {
   display: none;
   height: 2rem;
@@ -303,12 +303,9 @@ footer {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9; /* Sits cleanly behind the menu drawer */
   }
-  .nav-links {
-    position: relative;
-    transition: transform 0.3s linear;
-    transform: translateX(100%);
-  }
+
   .container {
     display: flex;
     flex-direction: column;
@@ -316,16 +313,13 @@ footer {
     justify-content: center;
     align-items: center;
   }
-  .nav-links ul {
-    display: none;
-  }
+
   .navbar {
     position: relative;
   }
-  .navbar.active ul {
-    display: flex;
-  }
-  .navbar.active .nav-links {
+
+  /* 1. Define the drawer in its baseline state (hidden off-screen) */
+  .nav-links {
     position: fixed;
     top: 0;
     right: 0;
@@ -333,26 +327,19 @@ footer {
     width: 45%;
     height: 100%;
     background-color: white;
+    z-index: 10;
+    /* Handles smooth animation both opening and closing */
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(100%);
+  }
+
+  /* 2. Slide it to 0 when active */
+  .navbar.active .nav-links {
     transform: translateX(0);
   }
 
-  .navbar .open {
-    display: block;
-    position: absolute;
-    right: 0;
-    height: 2rem;
-    width: 3rem;
-  }
-  .navbar.active .navbar .open {
-    visibility: hidden;
-  }
-  .navbar.active .nav-links .close {
-    position: absolute;
-    top: 1.5rem;
-    right: 4rem;
-    display: block;
-  }
-  .navbar.active ul {
+  /* 3. Layout the list elements inside the drawer permanently */
+  .nav-links ul {
     margin-top: 6rem;
     display: flex;
     flex-direction: column;
@@ -360,13 +347,29 @@ footer {
     align-items: start;
     gap: 2rem;
     padding: 2rem;
-    height: 100vh;
     width: 100%;
   }
-  .navbar.active ul li a {
+
+  .navbar ul li a {
     color: var(--dark-blue);
     font: var(--preset-5);
   }
+
+  /* 4. Display trigger icons properly */
+  .navbar .open {
+    display: block;
+    position: absolute;
+    right: 0;
+  }
+
+  .nav-links .close {
+    display: block;
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem; /* Aligned beautifully inside the drawer layout */
+  }
+
+  /* Responsive layout tweaks for the rest of the page */
   .featured-list {
     width: 100%;
     display: flex;
@@ -394,7 +397,6 @@ footer {
     gap: 1.25rem;
   }
 }
-
 @media (max-width: 33rem) {
   .navbar.active .nav-links {
     width: 75%;
