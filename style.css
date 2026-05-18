@@ -329,7 +329,8 @@ footer {
     background-color: white;
     z-index: 10;
     /* Handles smooth animation both opening and closing */
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s linear;
+
     transform: translateX(100%);
     visibility: hidden;
   }
